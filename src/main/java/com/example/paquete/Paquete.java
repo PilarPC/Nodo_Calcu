@@ -1,6 +1,8 @@
 package com.example.paquete;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Paquete  implements Serializable {
 
@@ -14,7 +16,15 @@ public class Paquete  implements Serializable {
         this.huellaServidor = " ";
 
     }
+    public String getClon() {
+        return clon;
+    }
 
+    public void setClon(String clon) {
+        this.clon = clon;
+    }
+
+    public String clon="";
     public String getMensaje() {
         return mensaje;
     }
@@ -89,8 +99,54 @@ public class Paquete  implements Serializable {
         this.acusesRecibidos = acusesRecibidos;
     }
 
+    public HashMap<String, Integer> getMapaHuellasDeServidores() {
+        return mapaHuellasDeServidores;
+    }
+
+    public void setMapaHuellasDeServidores(HashMap<String, Integer> mapaHuellasDeServidores) {
+        this.mapaHuellasDeServidores = mapaHuellasDeServidores;
+    }
+
+    public int getAcusesActualizadosSuma() {
+        return acusesActualizadosSuma;
+    }
+
+    public void setAcusesActualizadosSuma(int acusesActualizadosSuma) {
+        this.acusesActualizadosSuma = acusesActualizadosSuma;
+    }
+
+    public int getAcusesActualizadosResta() {
+        return acusesActualizadosResta;
+    }
+
+    public void setAcusesActualizadosResta(int acusesActualizadosResta) {
+        this.acusesActualizadosResta = acusesActualizadosResta;
+    }
+
+    public int getAcusesActualizadosMultiplicacion() {
+        return acusesActualizadosMultiplicacion;
+    }
+
+    public void setAcusesActualizadosMultiplicacion(int acusesActualizadosMultiplicacion) {
+        this.acusesActualizadosMultiplicacion = acusesActualizadosMultiplicacion;
+    }
+
+    public int getAcusesActualizadosDivision() {
+        return acusesActualizadosDivision;
+    }
+
+    public void setAcusesActualizadosDivision(int acusesActualizadosDivision) {
+        this.acusesActualizadosDivision = acusesActualizadosDivision;
+    }
+
 
     public String mensaje;
+    int acusesActualizadosSuma=2;
+    int acusesActualizadosResta=1;
+    int acusesActualizadosMultiplicacion=3;
+    int acusesActualizadosDivision=4;
+
+
     public int puertoEmisor;
     char IDdireccion;
     char codigoOperacion;
@@ -108,5 +164,6 @@ public class Paquete  implements Serializable {
 
     int acusesRecibidos = 0;
 
+    HashMap<String, Integer> mapaHuellasDeServidores = new HashMap<>();
 
 }
